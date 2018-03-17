@@ -18,6 +18,7 @@ namespace NeuralNetworkForNumbers
         
         static void Main(string[] args)
         {
+            float totalCount = 0, correctCount = 0;
             NeuralNetwork neuralNetwork = NeuralNetwork.fromXml();
             
             string[][] paths = new string[10][];
@@ -29,11 +30,19 @@ namespace NeuralNetworkForNumbers
             {
                 foreach (var path in paths[i])
                 {
+                    totalCount++;
                     int answer = neuralNetwork.getAnswer(JpegEncoder.Encode(path, Neuron.row, Neuron.column));
 
-                    Console.WriteLine(i + " - " + path + ": " + (answer == i ? "correct" : "incorrect; answer = " + answer));
+                    if (answer == i)
+                    {
+                        Console.WriteLine($"{i} - {path}: correct");
+                        correctCount++;
+                    }
+                    else
+                        Console.WriteLine($"{i} - {path}: incorrect; answer = {answer}");
                 }
             }
+            Console.WriteLine($"Correctness: {correctCount / totalCount * 100}%");
             Console.ReadLine();
         }
     }
