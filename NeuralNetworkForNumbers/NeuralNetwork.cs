@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace NeuralNetworkForNumbers
@@ -123,7 +125,7 @@ namespace NeuralNetworkForNumbers
             prepareForSerialization();
 
             XmlSerializer serializer = new XmlSerializer(this.GetType());
-            FileStream stream = new FileStream(Application.dataPath + "/NeuralNetwork.txt", FileMode.Create);
+            FileStream stream = new FileStream("/NeuralNetwork.txt", FileMode.Create);
             XmlWriter writer = new XmlTextWriter(stream, new System.Text.ASCIIEncoding());
             using (writer)
             {
@@ -134,7 +136,7 @@ namespace NeuralNetworkForNumbers
         public static NeuralNetwork fromXml()
         {
             string xml = "";
-            FileStream fStream = new FileStream(Application.dataPath + "/NeuralNetwork.txt",
+            FileStream fStream = new FileStream("/NeuralNetwork.txt",
                                                 FileMode.OpenOrCreate);
             if (fStream.Length > 0)
             {

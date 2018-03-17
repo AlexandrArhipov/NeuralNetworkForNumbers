@@ -70,7 +70,7 @@ namespace NeuralNetworkForNumbers
         {
             for (int r = 0; r < row; r++)
                 for (int c = 0; c < column; c++)
-                    weight[r, c] = Random.Range(0, 10);
+                    weight[r, c] = new Random().Next(10);
         }
 
         /**
