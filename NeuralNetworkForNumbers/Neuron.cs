@@ -16,10 +16,10 @@ namespace NeuralNetworkForNumbers
         public int minimum = 50; // порог
 
         [XmlIgnore]
-        public int row = 64, column = 64;
+        public static int row = 64, column = 64;
 
         /**
-         * Конструктор нейрона, создает веси и устанавливает случайные значения
+         * Конструктор нейрона, создает веса и устанавливает случайные значения
          */
         public Neuron()
         {
