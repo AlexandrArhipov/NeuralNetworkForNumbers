@@ -14,7 +14,7 @@ namespace NeuralNetworkForNumbers
 //            teacher.Teach(neuralNetwork, 100);
 //        }
 
-        private const string PathToTestingSet = @"../../TrainingSet/";
+        private const string PathToTestingSet = @"../../TestSet/";
         
         static void Main(string[] args)
         {
