@@ -31,9 +31,10 @@ namespace NeuralNetworkForNumbers
                 {
                     int answer = neuralNetwork.getAnswer(JpegEncoder.Encode(path, Neuron.row, Neuron.column));
 
-                    Console.WriteLine(i + ": " + (answer == i ? "correct" : "incorrect"));
+                    Console.WriteLine(i + " - " + path + ": " + (answer == i ? "correct" : "incorrect; answer = " + answer));
                 }
             }
+            Console.ReadLine();
         }
     }
 }

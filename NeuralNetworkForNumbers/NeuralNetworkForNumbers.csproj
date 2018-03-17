@@ -57,5 +57,8 @@
   <ItemGroup>
     <Folder Include="TrainingSet\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="NeuralNetwork.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
