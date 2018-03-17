@@ -125,7 +125,7 @@ namespace NeuralNetworkForNumbers
             prepareForSerialization();
 
             XmlSerializer serializer = new XmlSerializer(this.GetType());
-            FileStream stream = new FileStream("/NeuralNetwork.txt", FileMode.Create);
+            FileStream stream = new FileStream(@"../../NeuralNetwork.txt", FileMode.Create);
             XmlWriter writer = new XmlTextWriter(stream, new System.Text.ASCIIEncoding());
             using (writer)
             {
@@ -136,7 +136,7 @@ namespace NeuralNetworkForNumbers
         public static NeuralNetwork fromXml()
         {
             string xml = "";
-            FileStream fStream = new FileStream("/NeuralNetwork.txt",
+            FileStream fStream = new FileStream(@"../../NeuralNetwork.txt",
                                                 FileMode.OpenOrCreate);
             if (fStream.Length > 0)
             {

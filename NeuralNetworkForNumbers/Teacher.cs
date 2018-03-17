@@ -24,6 +24,9 @@ namespace NeuralNetworkForNumbers
 
             for (int iter = 0; iter < maxNumberOfIterations; iter++)
             {
+                if (_numbers.Count == 0)
+                    break;
+                
                 _numbers.Shuffle();
                 foreach (var number in _numbers)
                 {

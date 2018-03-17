@@ -16,7 +16,7 @@ namespace NeuralNetworkForNumbers
         public int minimum = 50; // порог
 
         [XmlIgnore]
-        public static int row = 64, column = 64;
+        public static int row = 28, column = 28;
 
         /**
          * Конструктор нейрона, создает веса и устанавливает случайные значения
